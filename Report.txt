@@ -1,0 +1,4 @@
+Titanic Dataset EDA Report 
+
+    -Higher class passenger s have high success rate
+    -Most passenger are in age range of 25-30
