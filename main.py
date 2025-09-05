@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
@@ -53,5 +54,18 @@ plt.scatter(df["Age"],df["Fare"] , alpha=0.5 , color = "green")
 plt.title("Age vs Fare")
 plt.xlabel("Age")
 plt.ylabel("Fare")
+plt.show()
+
+#Line Plot : For survival rate by age classification 
+
+
+df["AgeGroup"] = pd.cut(df["Age"], bins=np.arange(0,90,10))
+
+survival_by_age = df.groupby("AgeGroup")["Survived"].mean()
+
+survival_by_age.plot(marker="o",linestyle = "-", color ="green")
+plt.title = "Survival by Age Classification"
+plt.xlabel = "Age Group"
+plt.ylabel = "Survival Rate"
 plt.show()
 

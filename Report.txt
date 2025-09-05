@@ -2,3 +2,4 @@ Titanic Dataset EDA Report
 
     -Higher class passenger s have high success rate
     -Most passenger are in age range of 25-30
+    -Most survival rate is for kids inbetween 0 -10
